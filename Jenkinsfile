@@ -6,7 +6,7 @@ pipeline {
         script {
         git 'https://github.com/mpociot/whiteboard.git'
         sh 'ls'
-        sh 'whereis'
+        sh 'pwd'
         }
       }
     }
