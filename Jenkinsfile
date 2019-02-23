@@ -1,6 +1,9 @@
 pipeline {
   agent any
   stages {
+    stage('CheckOut') {
+      parallel {
+    
     stage('SCM') {
       steps {
         script {
@@ -20,6 +23,8 @@ pipeline {
                 }
             }      
         }
-     }    
+     }  
+      }   
+    }   
   }
 }
