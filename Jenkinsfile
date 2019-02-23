@@ -1,15 +1,13 @@
 pipeline {
   agent any
   stages {
-    
-    
-    
-    
-    
     stage('SCM') {
       steps {
+        script {
         git 'https://github.com/mpociot/whiteboard.git'
         sh 'ls'
+        sh 'whereis'
+        }
       }
     }
     stage('SonarQube analysis') {
